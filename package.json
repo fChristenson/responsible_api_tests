@@ -1,0 +1,25 @@
+{
+  "name": "responsible_api_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.0",
+    "@types/jest": "^24.0.16",
+    "axios": "^0.19.0",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "ts-node-dev": "^1.0.0-pre.40",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "start": "npx ts-node-dev --inspect=4000 --respawn  server.ts",
+    "test": "npx jest"
+  },
+  "author": "",
+  "license": "ISC"
+}

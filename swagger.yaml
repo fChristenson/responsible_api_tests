@@ -1,0 +1,47 @@
+openapi: "3.0.0"
+info:
+  description: "Some description"
+  version: "1.0.0"
+  title: "Test"
+paths:
+  /users:
+    get:
+      summary: Get a user
+      description: Get a user
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+    post:
+      summary: Create a user
+      description: Create a user
+      requestBody:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        name:
+          type: string
+        age:
+          type: integer
+          format: int32
+      required:
+        - name
+        - age
